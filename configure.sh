@@ -18,13 +18,13 @@ brew install git && brew install bash-completion
 
 echo ''
 echo "Now configuring git-completion..."
-GIT_VERSION=`git --version | awk '{print $3}'`
-URL="https://raw.github.com/git/git/v$GIT_VERSION/contrib/completion/git-completion.bash"
+#GIT_VERSION=`git --version | awk '{print $3}'`
+#URL="https://raw.github.com/git/git/v2.17.0/contrib/completion/git-completion.bash"
 echo ''
-echo "Downloading git-completion for git version: $GIT_VERSION..."
-if ! curl "$URL" --silent --output "$HOME/.git-completion.bash"; then
-	echo "ERROR: Couldn't download completion script. Make sure you have a working internet connection." && exit 1
-fi
+#echo "Downloading git-completion for git version: $GIT_VERSION..."
+#if ! curl "$URL" --silent --output "$HOME/.git-completion.bash"; then
+#	echo "ERROR: Couldn't download completion script. Make sure you have a working internet connection." && exit 1
+#fi
 
 # oh-my-zsh install
 echo ''
@@ -86,7 +86,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo ''
 	echo "Now pulling down jldeen dotfiles..."
-	git clone https://github.com/jldeen/dotfiles.git ~/.dotfiles
+	git clone https://github.com/jperez3/dotfiles.git ~/.dotfiles
 	echo ''
 	cd $HOME/.dotfiles && echo "switched to .dotfiles dir..."
 	echo ''
